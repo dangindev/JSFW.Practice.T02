@@ -1,0 +1,56 @@
+<div class="p-3">
+    <img src="https://blog.droom.in/droomassets/uploads/2016/07/crazy-car-herobanner.jpg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+    <h3 class="mt-2">Car Detail</h3>
+    <form name="registerCarForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="registerCarForm">
+        <div class="form-group row">
+            <label for="licensePlate" class="col-sm-2 col-form-label">License Plate<span class="text-danger">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="licensePlate" placeholder="89A - 8989*" formControlName="licensePlate" required>
+                <small class="form-text text-danger" *ngIf="registerCarForm.get('licensePlate')?.errors?.required">
+          This field is required.
+        </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="repairDate" class="col-sm-2 col-form-label">Repair Date<span class="text-danger">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="repairDate" placeholder="Repair Date" formControlName="repairDate" required>
+                <small class="form-text text-danger" *ngIf="registerCarForm.get('repairDate')?.errors?.required">
+          This field is required.
+        </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="customerName" class="col-sm-2 col-form-label">Customer name<span class="text-danger">*</span></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="customerName" placeholder="Customer name" formControlName="customerName" required>
+                <small class="form-text text-danger" *ngIf="registerCarForm.get('customerName')?.errors?.required">
+          This field is required.
+        </small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="catalog" class="col-sm-2 col-form-label">Catalog</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="catalog" placeholder="Catalog" formControlName="catalog">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="carMaker" class="col-sm-2 col-form-label">Car Maker</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="carMaker" placeholder="Car Maker" formControlName="carMaker">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-left">
+                <button type="submit" class="btn btn-primary" (click)="save()" [disabled]="registerCarForm.invalid || isSaving">Save
+          Car</button>
+            </div>
+            <div class="col-6 text-right">
+                <button type="submit" class="btn btn-primary" (click)="accessoryDetail()" *ngIf="viewAccessoryDetail">Accessory
+          Detail</button>
+            </div>
+        </div>
+
+    </form>
+</div>
