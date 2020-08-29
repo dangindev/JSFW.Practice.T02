@@ -1,0 +1,38 @@
+<div class="container">
+    <ul>
+        <li id="lilicensePlate"></li>
+        <li id="lirepairDate"></li>
+    </ul>
+    <form id="saveAccessoriesForm" role="form">
+        <legend class="text-center text-primary">Accessory Detail</legend>
+        <div class="form-group">
+            <input type="text" class="form-control" id="id" style="display: none;">
+            <label for="name">Name <span style="color: red;">*</span></label>
+            <input type="text" class="form-control" id="name" placeholder="Input name">
+            <label for="name">Price</label>
+            <input type="text" class="form-control" id="price" placeholder="Input price (VND)">
+            <label for="name">Status damaged</label>
+            <input type="text" class="form-control" id="statusDamaged" placeholder="Input status damaged">
+            <label for="name">Repair status</label>
+            <input type="text" class="form-control" id="repairStatus" placeholder="Input repair status">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="clickSaveAccessoryBtn()">Save Accessory</button>
+    </form>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Status damaged</th>
+                    <th>Repair status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
